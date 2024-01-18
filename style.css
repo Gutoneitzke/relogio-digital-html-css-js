@@ -18,18 +18,20 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
     min-height: 100vh;
 }
 
 .clock{
     display: flex;
+    justify-content: center;
     gap: 50px;
+    flex-wrap: wrap;
 }
 
 .clock span{
     color: var(--color-white);
     font-size: 150px;
-
     display: flex;
     align-items: center;
     gap: 50px;
@@ -41,6 +43,21 @@ body{
     color: var(--color-light);
 }
 
+h2{
+    width: 100%;
+    text-align: center;
+}
+
 h2 strong{
     color: var(--color-purple);
+}
+
+@media screen and (max-width: 992px) {
+    .clock span{
+        font-size: 50px;
+    }
+
+    .clock span:not(:last-child)::after{
+        display: none;
+    }
 }
